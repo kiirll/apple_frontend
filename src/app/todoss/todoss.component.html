@@ -1,0 +1,14 @@
+<div *ngFor="let todo of todos; let i = index" class="card">
+  
+  <div class="card-body">
+    <div class="row">
+      <div class="col-10"><input type="checkbox" [(ngModel)]="todo.completed">
+      <span [ngClass]="{'ff' : todo.completed}">
+        <strong>{{i+1}}</strong> {{todo.title}}
+      </span>
+    </div>
+    <div class="col-2 rm"><button class="btn btn-sm">&times;</button></div>
+    </div>
+  </div>
+  <small>{{todo.date | date}}</small>
+</div>
